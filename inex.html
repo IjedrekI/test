@@ -6,12 +6,17 @@
 <meta name="keywords" content="html tutorial template">
 </head>
 <body>
-Content goes here.
-jakas zmiana.
-jakas zmina
-sdfsdf
-fdfdf
+
 <script>
+let serwer = "ws://www.wsei.edu.pl:8810"
+let ws = new WebSocket(serwer)
+Console.Log(WebSocket.readyState )
+
+let msg = {
+    title: 'Andrzej',
+    body: "Witas"
+}
+ws.send(msg);
 
 </script>
 
