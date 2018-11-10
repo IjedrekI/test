@@ -7,16 +7,21 @@
 </head>
 <body>
 
+
 <script>
-let serwer = "ws://www.wsei.edu.pl:8810"
+let serwer = 'ws://www.wsei.edu.pl:8810'
 let ws = new WebSocket(serwer)
-Console.Log(WebSocket.readyState )
+let a = WebSocket.readyState 
+console.log(a);
+ws.onopen = function() {
+    console.log("Jest polaczenie");
+};
 
 let msg = {
     title: 'Andrzej',
-    body: "Witas"
+    body: 'Witas'
 }
-ws.send(msg);
+ws.send(JSON.stringify(msg));
 
 </script>
 
